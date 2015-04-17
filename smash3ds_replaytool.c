@@ -9,8 +9,8 @@ replay data format:
 0x0 u32: checksum. val = 0; val ^= <each word in replay starting @ offset 0x4>
 0x4 u32: magic word, 0x4b4d4343 "CCMK".
 0x8 u32: replay version. 0 = original, 1 = game v1.0.4 update.
-0xc u32: replay data size excluding the 0x2480-byte header, this must be >0.
-0x10 u16: header size, must be 0x2480.
+0xc u32: replay data size excluding the header, this must be >0.
+0x10 u16: header size, must be 0x2480(with <=v1.0.4 at least).
 0x12 u16: must be non-zero and <=2.
 */
 
